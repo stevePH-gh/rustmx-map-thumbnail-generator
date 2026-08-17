@@ -1,2 +1,8 @@
 # rustmx-map-thumbnail-generator
-A prototyp thumbnail generator for Rusted Warfare maps
+A prototype thumbnail generator for Rusted Warfare maps
+
+## Upcoming Features
+- Larger map support
+- Layer filters
+- Team overlay
+- Resources overlay
