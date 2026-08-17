@@ -7,4 +7,4 @@ A prototype thumbnail generator for Rusted Warfare maps
 - Team overlay
 - Resources overlay
 
-[Download 👈](https://github.com/stevePH-gh/rustmx-map-thumbnail-generator/releases)
+[Download](https://github.com/stevePH-gh/rustmx-map-thumbnail-generator/releases) 👈
