@@ -1,0 +1,17 @@
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RustedWarfareTMXViewer.csproj.AssemblyReference.cache
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RustedWarfareTMXViewer.Form1.resources
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RustedWarfareTMXViewer.Properties.Resources.resources
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RustedWarfareTMXViewer.csproj.GenerateResource.cache
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RustedWarfareTMXViewer.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\RustedWarfareTMXViewer\bin\Debug\RusTMX.exe.config
+C:\Users\User\source\repos\RustedWarfareTMXViewer\bin\Debug\RusTMX.exe.manifest
+C:\Users\User\source\repos\RustedWarfareTMXViewer\bin\Debug\RusTMX.application
+C:\Users\User\source\repos\RustedWarfareTMXViewer\bin\Debug\RusTMX.exe
+C:\Users\User\source\repos\RustedWarfareTMXViewer\bin\Debug\RusTMX.pdb
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RustedWarfareTMXViewer.csproj.Fody.CopyLocal.cache
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RustedWarfareTMXViewer.csproj.Fody.RuntimeCopyLocal.cache
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RusTMX.exe.manifest
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RusTMX.application
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RusTMX.exe
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RusTMX.pdb
+C:\Users\User\source\repos\RustedWarfareTMXViewer\obj\Debug\RusTMX.exe.config

@@ -1,0 +1,375 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="packages\Costura.Fody.6.2.0\build\Costura.Fody.props" Condition="Exists('packages\Costura.Fody.6.2.0\build\Costura.Fody.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{41EA7C4E-BD84-45F2-B818-38CC0642869F}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RustedWarfareTMXViewer</RootNamespace>
+    <AssemblyName>RusTMX</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <PublishUrl>C:\Users\User\Documents\Projects\VisualStudio\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>1</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <PublishWizardCompleted>true</PublishWizardCompleted>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestCertificateThumbprint>ED763E8C95FE91E4569FCEB4415BD5F625443DE6</ManifestCertificateThumbprint>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ManifestKeyFile>RustedWarfareTMXViewer_TemporaryKey.pfx</ManifestKeyFile>
+  </PropertyGroup>
+  <PropertyGroup>
+    <GenerateManifests>true</GenerateManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <SignManifests>true</SignManifests>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Costura, Version=6.2.0.0, Culture=neutral, PublicKeyToken=9919ef960d84173d, processorArchitecture=MSIL">
+      <HintPath>packages\Costura.Fody.6.2.0\lib\netstandard2.0\Costura.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2shallowwater_flat.xcf" />
+    <None Include="app.manifest" />
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assets\tilesets\decoration.tsx" />
+    <EmbeddedResource Include="assets\tilesets\misc.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Dirt Dirt - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Dirt ShalowWater - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Ice Ice - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Ice ShallowWater - Broken.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Ice ShallowWater - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\LongGrass Dirt - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\LongGrass Dirt - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\LongGrass LongGrass - Hill.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\LongGrass LongGrass - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\LongGrass ShallowWater - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\LongGrass ShallowWater - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\LongGrass ShortGrass - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Dirt - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Dirt - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain LongGrass - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Mountain - Hill.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Mountain - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Nothing - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Nothing - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Sand - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Sand - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain ShallowWater - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain ShallowWater - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Snow - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Stone - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Mountain Stone - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Nothing Dust - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Nothing Road - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Nothing Sand - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand Dirt - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand Dirt - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand LandGrass - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand Nothing - Flat - 2.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand Nothing - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand Sand - Hill.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand Sand - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand ShallowWater - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Sand ShallowWater - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\ShallowWater Water - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Snow Dirt - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Snow Dirt - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Snow Ice - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Snow Snow - Hill.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Snow Snow - ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Stone Lava - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Stone Sand - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Stone ShallowWater - ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Stone Snow - ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Stone Stone - Ridge.tsx" />
+    <EmbeddedResource Include="assets\tilesets\ridges\Water DeepWater - Flat.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Deep Water.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Dirt.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Dirt_Details.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Dust.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Ice.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Lava.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Long Grass.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Mountain.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Sand.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Shallow Water.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Short Grass.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Snow.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Stone.tsx" />
+    <EmbeddedResource Include="assets\tilesets\terrain\Water.tsx" />
+    <EmbeddedResource Include="assets\tilesets\units.tsx" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="assets\tilesets\bitmaps\bridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\decoration.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\deepwater.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2dirt_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2dirt_ridge_old.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2ice_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2lava_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2longgrass_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2mountain_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2sand_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2shallowwater_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2snow_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt2stone_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dirt_details.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\dust.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\fauna.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\fauna_dark.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\fauna_highland.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice2ice_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice2nothing_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice2shallowwater_broken.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice2shallowwater_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\ice2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\lava.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\lava2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\lava2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\lava2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\lava2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2dirt_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2ice_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2ice_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2lava_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2lava_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2longgrass_hill.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2longgrass_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2mountain_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2mountain_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2sand_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2shallowwater_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2shallowwater_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2shortgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2snow_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2stone_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longgrass2stone_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\longrass2darkgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\misc.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2dirt_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2highland_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2ice_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2ice_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2lava_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2lava_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2longgrass_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2mountain_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2mountain_hill.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2mountain_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2nothing_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2nothing_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2sand_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2shallowwater_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2shallowwater_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2snow_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2stone_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\mountain2stone_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\nothing2dust_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\nothing2road_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\nothing2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2darksand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2darksand_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2dirt_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2ice_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2ice_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2lava_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2lava_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2longgrass_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2mountain_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2mountain_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2nothing_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2sand_hill.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2sand_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2shallowwater_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2shallowwater_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2snow_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2stone_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand2stone_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\sand_dark.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\shallowwater.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\shallowwater2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\shallowwater2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\shallowwater2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\shallowwater2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\shallowwater2water_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\shortgrass.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2dirt_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2ice_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2lava_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2longgrass_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2mountain_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2sand_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2shallowwater_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2snow_hill.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2snow_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\snow2stone_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2dirt_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2dirt_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2ice_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2lava.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2lava_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2longgrass_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2longgrass_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2mountain_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2sand_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2sand_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2shallowwater_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2snow.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2snow_flat.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2snow_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\stone2stone_ridge.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\units.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\water.png" />
+    <EmbeddedResource Include="assets\tilesets\bitmaps\water2deepwater_flat.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.8">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.8 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="icon.ico" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Import Project="packages\Fody.6.9.3\build\Fody.targets" Condition="Exists('packages\Fody.6.9.3\build\Fody.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('packages\Fody.6.9.3\build\Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Fody.6.9.3\build\Fody.targets'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.6.2.0\build\Costura.Fody.props')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.6.2.0\build\Costura.Fody.props'))" />
+    <Error Condition="!Exists('packages\Costura.Fody.6.2.0\build\Costura.Fody.targets')" Text="$([System.String]::Format('$(ErrorText)', 'packages\Costura.Fody.6.2.0\build\Costura.Fody.targets'))" />
+  </Target>
+  <Import Project="packages\Costura.Fody.6.2.0\build\Costura.Fody.targets" Condition="Exists('packages\Costura.Fody.6.2.0\build\Costura.Fody.targets')" />
+</Project>
